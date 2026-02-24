@@ -55,7 +55,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Libre+Franklin:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/apple-garamond" rel="stylesheet">
     <style>
         *, *::before, *::after {
             margin: 0;
@@ -73,7 +74,7 @@
             --accent: #c9a87c;
             --accent-hover: #dbbf98;
             --border: rgba(255,255,255,0.06);
-            --serif: 'Playfair Display', Georgia, serif;
+            --serif: 'Apple Garamond', 'ITC Garamond', Garamond, Georgia, serif;
             --sans: 'Libre Franklin', Helvetica Neue, sans-serif;
         }
 
@@ -105,45 +106,6 @@
             padding: 0 2rem;
         }
 
-        /* --- Header --- */
-        header {
-            padding: 2.5rem 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .header-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: var(--sans);
-            font-size: 0.7rem;
-            font-weight: 500;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: var(--text-muted);
-        }
-
-        .nav-contact {
-            font-family: var(--sans);
-            font-size: 0.7rem;
-            font-weight: 400;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--accent);
-            text-decoration: none;
-            padding: 0.55rem 1.3rem;
-            border: 1px solid rgba(201, 168, 124, 0.3);
-            transition: all 0.4s ease;
-        }
-
-        .nav-contact:hover {
-            background: var(--accent);
-            color: var(--bg);
-        }
-
         /* --- Hero --- */
         .hero {
             padding: 7rem 0 2rem;
@@ -152,7 +114,7 @@
 
         .hero h1 {
             font-family: var(--serif);
-            font-size: clamp(2.8rem, 6vw, 4.2rem);
+            font-size: clamp(3.2rem, 7vw, 4.8rem);
             font-weight: 400;
             line-height: 1.15;
             color: var(--text);
@@ -166,14 +128,15 @@
 
         .hero-sub {
             font-family: var(--serif);
-            font-size: clamp(1.4rem, 3vw, 1.9rem);
+            font-size: clamp(1.8rem, 3.5vw, 2.4rem);
             font-weight: 300;
             font-style: italic;
             color: var(--text-body);
-            max-width: 520px;
-            margin: 0 0 3rem auto;
-            line-height: 1.55;
-            text-align: right;
+            max-width: 580px;
+            margin: 0 auto 3rem;
+            line-height: 1.4;
+            text-align: center;
+            letter-spacing: 0.02em;
         }
 
         .hero-sub em {
@@ -260,8 +223,8 @@
         }
 
         .service-item p {
-            font-size: 0.8rem;
-            color: var(--text-muted);
+            font-size: 0.82rem;
+            color: var(--text-body);
             line-height: 1.6;
         }
 
@@ -344,11 +307,6 @@
             .hero { padding: 5rem 0 1.5rem; }
             section { padding: 3.5rem 0; }
             .services-grid { grid-template-columns: 1fr; }
-            .header-inner {
-                flex-direction: column;
-                gap: 1.5rem;
-                align-items: flex-start;
-            }
             .cta { padding: 1rem 2.4rem; }
             .contact-section { padding: 4rem 0; }
         }
@@ -356,18 +314,11 @@
 </head>
 <body>
 
-    <header>
-        <div class="container header-inner">
-            <div class="logo">chriselmstech.co.uk</div>
-            <a href="mailto:info@chriselmstech.co.uk" class="nav-contact">Get in Touch</a>
-        </div>
-    </header>
-
     <section class="hero">
         <div class="container">
             <h1 class="fade-in">Chris Elms<br><span>Tech Services</span></h1>
             <p class="hero-sub fade-in stagger-1">Expert IT support for <em>creative professionals</em> and private clients across Greater London.</p>
-            <div class="fade-in stagger-2" style="text-align:right">
+            <div class="fade-in stagger-2" style="text-align:center">
                 <a href="mailto:info@chriselmstech.co.uk" class="cta">Contact Me</a>
             </div>
             <div class="hero-divider"></div>
@@ -395,7 +346,7 @@
                     <p>Structured, secure long-term storage for recordings, sessions, and personal archives</p>
                 </div>
                 <div class="service-item">
-                    <h3>Automated Backups</h3>
+                    <h3>Backup Automation</h3>
                     <p>Set-and-forget backup systems you can rely on — locally and to the cloud</p>
                 </div>
                 <div class="service-item">
